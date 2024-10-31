@@ -38,6 +38,13 @@ PRODUCT_PACKAGES += \
     libmegface \
     libpiex_shim
 
+# Consumer IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.xiaomi
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
@@ -83,6 +90,22 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel
+
+# Telephony
+PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper_prd.xml \
+    qti-telephony-utils-prd \
+    qti_telephony_utils_prd.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.6.vendor
 
 # Wlan fix for stock kernel
 ifeq ($(TARGET_USE_PREBUILT_KERNEL),true)
