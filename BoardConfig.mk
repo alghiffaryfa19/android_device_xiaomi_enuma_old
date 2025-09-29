@@ -55,7 +55,7 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/interfaces/peripherals/1.0/default/device_framework_matrix.xml
 
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_phone.xml
+# DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_phone.xml
 
 # Inherit from the proprietary version
 include vendor/xiaomi/enuma/BoardConfigVendor.mk
