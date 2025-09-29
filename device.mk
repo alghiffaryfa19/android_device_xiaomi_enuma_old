@@ -11,10 +11,10 @@ TARGET_IS_VAB := true
 TARGET_IS_TABLET := true
 
 # Use prebuilt kernel
-TARGET_USE_PREBUILT_KERNEL := true
+TARGET_USE_PREBUILT_KERNEL := false
 
 # Add Gapps
-TARGET_ADD_GAPPS := true
+TARGET_ADD_GAPPS := false
 
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
@@ -37,13 +37,6 @@ PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface \
     libpiex_shim
-
-# Consumer IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir-service.xiaomi
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Fingerprint
 PRODUCT_PACKAGES += \
