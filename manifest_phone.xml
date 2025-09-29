@@ -18,16 +18,6 @@
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.tetheroffload.config</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IOffloadConfig/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.tetheroffload.control</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IOffloadControl/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IIWlan/slot1</fqname>
